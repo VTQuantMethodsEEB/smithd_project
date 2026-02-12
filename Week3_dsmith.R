@@ -23,6 +23,7 @@ cproj1$AvgRHperc <- as.numeric(cproj1$AvgRHperc)
 ##PLOTS
 rhxflower <- ggplot( cproj1, aes ( x = AvgRHperc, y = FirstFlower)) +
   geom_smooth ( color = "hotpink", method = "lm") +
+  geom_point()+
   labs(
     x = "Avg Plot Relative Humidity",
     y = "Week of First Flower") +
@@ -35,6 +36,7 @@ rhxflower
 
 
 tempxflower <- ggplot( cproj1, aes ( x = AvgTempC, y = FirstFlower)) +
+  geom_point()+
   geom_smooth ( color = "hotpink", method = "lm") +
   labs(
     x = "Avg Plot Temp",
@@ -48,6 +50,7 @@ tempxflower
 
 
 vpdxflower <- ggplot( cproj1, aes ( x = AvgVPD, y = FirstFlower)) +
+  geom_point()+
   geom_smooth ( color = "hotpink", method = "lm") +
   labs(
     x = "Avg Plot VPD",
