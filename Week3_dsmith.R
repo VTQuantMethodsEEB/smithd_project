@@ -61,3 +61,85 @@ vpdxflower <- ggplot( cproj1, aes ( x = AvgVPD, y = FirstFlower)) +
     plot.background  = element_rect(fill = "white", color = NA)
   )
 vpdxflower
+
+rhxleaves <- ggplot( cproj1, aes ( x = AvgRHperc, y = FirstLeaves)) +
+  geom_smooth ( color = "hotpink", method = "lm") +
+  geom_point()+
+  labs(
+    x = "Avg Plot Relative Humidity",
+    y = "Week of First Leaves") +
+  theme_minimal() +
+  theme(
+    panel.background = element_rect(fill = "white", color = NA),
+    plot.background  = element_rect(fill = "white", color = NA)
+  )
+rhxleaves
+
+
+tempxleaves <- ggplot( cproj1, aes ( x = AvgTempC, y = FirstLeaves)) +
+  geom_point()+
+  geom_smooth ( color = "hotpink", method = "lm") +
+  labs(
+    x = "Avg Plot Temp",
+    y = "Week of First Leaves") +
+  theme_minimal() +
+  theme(
+    panel.background = element_rect(fill = "white", color = NA),
+    plot.background  = element_rect(fill = "white", color = NA)
+  )
+tempxleaves
+
+
+vpdxleaves <- ggplot( cproj1, aes ( x = AvgVPD, y = FirstLeaves)) +
+  geom_point()+
+  geom_smooth ( color = "hotpink", method = "lm") +
+  labs(
+    x = "Avg Plot VPD",
+    y = "Week of First Leaves") +
+  theme_minimal() +
+  theme(
+    panel.background = element_rect(fill = "white", color = NA),
+    plot.background  = element_rect(fill = "white", color = NA)
+  )
+vpdxleaves
+
+rhxgrowth <- ggplot( cproj1, aes ( x = AvgRHperc, y = FirstInitialGrowth)) +
+  geom_smooth ( color = "hotpink", method = "lm") +
+  geom_point()+
+  labs(
+    x = "Avg Plot Relative Humidity",
+    y = "Week of First Initial Growth") +
+  theme_minimal() +
+  theme(
+    panel.background = element_rect(fill = "white", color = NA),
+    plot.background  = element_rect(fill = "white", color = NA)
+  )
+rhxgrowth
+
+
+tempxgrowth <- ggplot( cproj1, aes ( x = AvgTempC, y = FirstInitialGrowth)) +
+  geom_point()+
+  geom_smooth ( color = "hotpink", method = "lm") +
+  labs(
+    x = "Avg Plot Temp",
+    y = "Week of First Initial Growth") +
+  theme_minimal() +
+  theme(
+    panel.background = element_rect(fill = "white", color = NA),
+    plot.background  = element_rect(fill = "white", color = NA)
+  )
+tempxgrowth
+
+
+vpdxgrowth <- ggplot( cproj1, aes ( x = AvgVPD, y = FirstInitialGrowth)) +
+  geom_point()+
+  geom_smooth ( color = "hotpink", method = "lm") +
+  labs(
+    x = "Avg Plot VPD",
+    y = "Week of First Initial Growth") +
+  theme_minimal() +
+  theme(
+    panel.background = element_rect(fill = "white", color = NA),
+    plot.background  = element_rect(fill = "white", color = NA)
+  )
+vpdxgrowth
