@@ -15,13 +15,13 @@
 # WEEK 1
 
 
-## WEEK 2
+# WEEK 2
 #### I ogranized the data by species and species richness for phenological stage intial growth
 #### I then used the summarise function to get the mean, standard deviation, and standard error
 #### I then used to mutate to organize my data by creating a column that looked at the difference in growth from week 1 to week 10
 
 
-## WEEK 3
+# WEEK 3
 #### I used ggplot to make figures where i look at microclimate's affect on flower phenology
 
 
