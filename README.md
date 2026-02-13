@@ -13,7 +13,7 @@
 #### Lastly, I would like to create figures based on the most significant model using ggplot.
 
 # WEEK 1
-
+I explored the structure and dimensions of my data using some of the essentail R functions
 
 # WEEK 2
 #### I ogranized the data by species and species richness for phenological stage intial growth
