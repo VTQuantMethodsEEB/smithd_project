@@ -30,7 +30,6 @@ for (i in 1:10000) {
   res[i] <- mean(highboot, na.rm = TRUE) - mean(lowboot, na.rm = TRUE) # compute difference in means
 }
   
-
 #observed data in actual data with no shuffling
 obs <- mean(cproj1$SpeciesRichness[cproj1$rich.cat == "high"], na.rm = TRUE) -
     mean(cproj1$SpeciesRichness[cproj1$rich.cat == "low"], na.rm = TRUE)

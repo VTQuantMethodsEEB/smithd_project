@@ -25,7 +25,7 @@ I explored the structure and dimensions of my data using some of the essentail R
 #### I used ggplot to make figures where i look at microclimate's affect on flower phenology
 
 # Week 5
-#### I hypothesize 
+#### I used a permutation test and a classical t test to test hypothesis about the effects of Species Richness 
 
 
 
