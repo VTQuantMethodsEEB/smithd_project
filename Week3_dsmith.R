@@ -5,6 +5,9 @@
 install.packages("ggplot2")
 library(ggplot2)
 
+#KL - need to read in files
+cproj1 = read.csv("pheno_classdata_Jan29.csv")
+
 #set variables all as numeric
 cproj1$FirstInitialGrowth <- as.numeric(cproj1$FirstInitialGrowth)
 cproj1$FirstLeaves <- as.numeric(cproj1$FirstLeaves)
@@ -19,7 +22,7 @@ cproj1$AvgTempC <- as.numeric(cproj1$AvgTempC)
 cproj1$AvgVPD <- as.numeric(cproj1$AvgVPD)
 cproj1$AvgRHperc <- as.numeric(cproj1$AvgRHperc)
 
-
+library(ggplot2)
 ##PLOTS
 rhxflower <- ggplot( cproj1, aes ( x = AvgRHperc, y = FirstFlower)) +
   geom_smooth ( color = "hotpink", method = "lm") +
