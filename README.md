@@ -40,7 +40,23 @@ DATA: pheno_classdata_Jan29
 CODE : week5_dsmith
 DATA: pheno_classdata_Jan29
 
-# Week 7 I used linear regression model to under how species richness and species may affect VPD
+# Week 7/8 I used linear regression model to under how species richness and species may affect VPD
 ##
 CODE : week7_8_dsmith
 DATA: pheno_classdata_Jan29
+
+# Week 10/11 I used generalized linear model to under how species richness and species may also affect plant development stage
+##
+CODE : week7_8_dsmith
+DATA: pheno_classdata_Jan29
+
+
+
+
+
+
+
+
+
+
+
