@@ -24,19 +24,23 @@ I explored the structure and dimensions of my data using some of the essentail R
 -  I ogranized the data by species and species richness for phenological stage intial growth
 - I then used the summarise function to get the mean, standard deviation, and standard error
 - I then used to mutate to organize my data by creating a column that looked at the difference in growth from week 1 to week 10
+##
 CODE : week2_dsmith
 DATA: pheno_classdata_Jan29
 
 # WEEK 3
 #### I used ggplot to make figures where i look at microclimate's affect on flower phenology
+##
 CODE : week3_dsmith
 DATA: pheno_classdata_Jan29
 
 # Week 5
 #### I used a permutation test and a classical t test to test hypothesis about the effects of Species Richness 
+##
 CODE : week5_dsmith
 DATA: pheno_classdata_Jan29
 
 # Week 7 I used linear regression model to under how species richness and species may affect VPD
+##
 CODE : week7_8_dsmith
 DATA: pheno_classdata_Jan29
