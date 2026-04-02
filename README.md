@@ -28,4 +28,5 @@ I explored the structure and dimensions of my data using some of the essentail R
 #### I used a permutation test and a classical t test to test hypothesis about the effects of Species Richness 
 
 
+# Week 7
 
