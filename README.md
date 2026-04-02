@@ -47,7 +47,7 @@ DATA: pheno_classdata_Jan29
 
 # Week 10/11 I used generalized linear model to under how species richness and species may also affect plant development stage
 ##
-CODE : week7_8_dsmith
+CODE : Smith_Week10_Results
 DATA: pheno_classdata_Jan29
 
 
