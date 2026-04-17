@@ -69,7 +69,7 @@ plot(lm_pheno3)
 library(performance)
 p <- check_model(lm_pheno)
 p
-
+#kl - this worked for me?
 
 
 
