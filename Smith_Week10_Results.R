@@ -42,8 +42,6 @@ plot(allEffects(srVPDxl2))
 plot(allEffects(srVPDxl))
 plot(allEffects(vpdxl))
 
-
-
 anova(vpdxl,srVPDxl)
 anova(vpdxl,srVPDxl2)
 anova(srVPDxl,srVPDxl2)
