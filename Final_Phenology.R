@@ -6,7 +6,7 @@ library(ggplot2)
 install.packages("ggpubr")
 library(ggpubr)
 
-#using this package because the paper experiment is modeled after uses this for phenoology vs temp
+#using this package because the paper experiment is modeled after uses this for phenoology vs micro
 install.packages("nlme")
 library(nlme)
 library(dplyr)
