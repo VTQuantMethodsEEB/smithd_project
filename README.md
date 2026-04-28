@@ -50,7 +50,10 @@ DATA: pheno_classdata_Jan29
 CODE : Smith_Week10_Results
 DATA: pheno_classdata_Jan29
 
-
+# Week 12 I used linear mixed model to understand how microclimate, species richness, and species also affect plant development stage
+##
+CODE : Week12_dsmith
+DATA: pheno_classdata_Jan29
 
 
 
