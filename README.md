@@ -55,7 +55,8 @@ DATA: pheno_classdata_Jan29
 CODE : Week12_dsmith
 DATA: pheno_classdata_Jan29
 
-
+#Final Project
+# In this code, i used linear mixed effects model to analyze AVG ploy VPD infleunce of phenological stage
 
 
 
