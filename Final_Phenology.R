@@ -1,6 +1,6 @@
 # Final Coding
-
-cproj1 = read.csv("pheno_classdata_Jan29.csv")
+cproj1 = read.csv("fullpheno2026_Jan5copy.csv")
+head(cproj1)
 install.packages("ggplot2")
 library(ggplot2)
 install.packages("ggpubr")
@@ -37,53 +37,92 @@ cproj1_nobrosolsch <- cproj1 %>% filter(!grepl("broin|solri|schsc", Species)) # 
 cproj1_nobrosollessch <- cproj1 %>% filter(!grepl("broin|lesca|solri|schsc", Species)) # use for ripe fruit
 
 
-##### CODING BEGINS 
+##### Modeling BEGINS 
 
-Hypothesis
+#Hypothesis
 # VPD vs Phenology + SpeciesRichness*Species
 ivpd <- lme(FirstInitialGrowth ~ AvgVPD + SpeciesRichness*Species, random = ~ 1 | Ring/Plot_Num, data = cproj1_nosol, na.action = na.omit)
 anova(ivpd)
 
-lvpd <- lme(FirstLeaves ~ AvgVPD + Species*SpeciesRichness, random = ~ 1 | Ring/Plot_Num, data = cproj1_nosol, na.action = na.omit)
+lvpd <- lme(FirstLeaves ~ AvgVPD + SpeciesRichness*Species, random = ~ 1 | Ring/Plot_Num, data = cproj1_nosol, na.action = na.omit)
 anova(lvpd)
 
-fvpd<- lme(FirstFlower ~ AvgVPD + Species*SpeciesRichness, random = ~ 1 | Ring/Plot_Num, data = cproj1_nobropoasollup, na.action = na.omit)
+fvpd<- lme(FirstFlower ~ AvgVPD + SpeciesRichness*Species, random = ~ 1 | Ring/Plot_Num, data = cproj1_nobropoasollup, na.action = na.omit)
 anova(fvpd)
 
-frvpd <- lme( FirstFruit ~ AvgVPD + Species*SpeciesRichness, random = ~ 1 | Ring/Plot_Num, data = cproj1_nobrosolsch, na.action = na.omit)
+frvpd <- lme( FirstFruit ~ AvgVPD + SpeciesRichness*Species, random = ~ 1 | Ring/Plot_Num, data = cproj1_nobrosolsch, na.action = na.omit)
 anova(frvpd)
 
-rvpd <- lme( FirstRipeFruit ~ AvgVPD + Species*SpeciesRichness, random = ~ 1 | Ring/Plot_Num, data = cproj1_nobrosollessch, na.action = na.omit)
+rvpd <- lme( FirstRipeFruit ~ AvgVPD + SpeciesRichness*Species, random = ~ 1 | Ring/Plot_Num, data = cproj1_nobrosollessch, na.action = na.omit)
 anova(rvpd)
 
 # Temp vs Phenology + SpeciesRichness*Species
 itemp <- lme(FirstInitialGrowth ~ AvgTempC + SpeciesRichness*Species, random = ~ 1 | Ring/Plot_Num, data = cproj1_nosol, na.action = na.omit)
 anova(itemp)
 
-ltemp <- lme(FirstLeaves ~ AvgTempC + Species*SpeciesRichness, random = ~ 1 | Ring/Plot_Num, data = cproj1_nosol, na.action = na.omit)
+ltemp <- lme(FirstLeaves ~ AvgTempC + SpeciesRichness*Species, random = ~ 1 | Ring/Plot_Num, data = cproj1_nosol, na.action = na.omit)
 anova(ltemp)
 
-ftemp<- lme(FirstFlower ~ AvgTempC + Species*SpeciesRichness, random = ~ 1 | Ring/Plot_Num, data = cproj1_nobropoasollup, na.action = na.omit)
+ftemp<- lme(FirstFlower ~ AvgTempC + SpeciesRichness*Species, random = ~ 1 | Ring/Plot_Num, data = cproj1_nobropoasollup, na.action = na.omit)
 anova(ftemp)
 
-frtemp <- lme( FirstFruit ~ AvgTempC + Species*SpeciesRichness, random = ~ 1 | Ring/Plot_Num, data = cproj1_nobrosolsch, na.action = na.omit)
+frtemp <- lme( FirstFruit ~ AvgTempC + SpeciesRichness*Species, random = ~ 1 | Ring/Plot_Num, data = cproj1_nobrosolsch, na.action = na.omit)
 anova(frtemp)
 
-rtemp <- lme( FirstRipeFruit ~ AvgTempC + Species*SpeciesRichness, random = ~ 1 | Ring/Plot_Num, data = cproj1_nobrosollessch, na.action = na.omit)
+rtemp <- lme( FirstRipeFruit ~ AvgTempC + SpeciesRichness*Species, random = ~ 1 | Ring/Plot_Num, data = cproj1_nobrosollessch, na.action = na.omit)
 anova(rtemp)
 
 #Humidity vs vs Phenology + SpeciesRichness*Species
 ihum <- lme(FirstInitialGrowth ~ AvgRHperc + SpeciesRichness*Species, random = ~ 1 | Ring/Plot_Num, data = cproj1_nosol, na.action = na.omit)
 anova(ihum)
 
-lhum <- lme(FirstLeaves ~ AvgRHperc + Species*SpeciesRichness, random = ~ 1 | Ring/Plot_Num, data = cproj1_nosol, na.action = na.omit)
+lhum <- lme(FirstLeaves ~ AvgRHperc + SpeciesRichness*Species, random = ~ 1 | Ring/Plot_Num, data = cproj1_nosol, na.action = na.omit)
 anova(lhum)
 
-fhum <- lme(FirstFlower ~ AvgRHperc + Species*SpeciesRichness, random = ~ 1 | Ring/Plot_Num, data = cproj1_nobropoasollup, na.action = na.omit)
+fhum <- lme(FirstFlower ~ AvgRHperc + SpeciesRichness*Species, random = ~ 1 | Ring/Plot_Num, data = cproj1_nobropoasollup, na.action = na.omit)
 anova(fhum)
 
-frhum <- lme( FirstFruit ~ AvgRHperc + Species*SpeciesRichness, random = ~ 1 | Ring/Plot_Num, data = cproj1_nobrosolsch, na.action = na.omit)
+frhum <- lme( FirstFruit ~ AvgRHperc + SpeciesRichness*Species, random = ~ 1 | Ring/Plot_Num, data = cproj1_nobrosolsch, na.action = na.omit)
 anova(frhum)
 
-rhum <- lme( FirstRipeFruit ~ AvgRHperc + Species*SpeciesRichness, random = ~ 1 | Ring/Plot_Num, data = cproj1_nobrosollessch, na.action = na.omit)
+rhum <- lme( FirstRipeFruit ~ AvgRHperc + SpeciesRichness*Species, random = ~ 1 | Ring/Plot_Num, data = cproj1_nobrosollessch, na.action = na.omit)
 anova(rhum)
+
+# Best Model AICc Selection
+fitListgrowth <- list(
+  ivpd = lme( FirstInitialGrowth ~ AvgVPD + SpeciesRichness*Species, random = ~ 1 | Ring/Plot_Num, data = cproj1_nosol, na.action = na.omit),
+  itemp = lme(FirstInitialGrowth ~ AvgTempC + SpeciesRichness*Species, random = ~ 1 | Ring/Plot_Num, data = cproj1_nosol, na.action = na.omit),
+  ihum = lme(FirstInitialGrowth ~ AvgRHperc + SpeciesRichness*Species, random = ~ 1 | Ring/Plot_Num, data = cproj1_nosol, na.action = na.omit))
+
+fitListleaves <- list(
+  lvpd = lme(FirstLeaves ~ AvgVPD + SpeciesRichness*Species, random = ~ 1 | Ring/Plot_Num, data = cproj1_nosol, na.action = na.omit),
+  ltemp = lme(FirstLeaves ~ AvgTempC + SpeciesRichness*Species, random = ~ 1 | Ring/Plot_Num, data = cproj1_nosol, na.action = na.omit),
+  lhum = lme(FirstLeaves ~ AvgRHperc + SpeciesRichness*Species, random = ~ 1 | Ring/Plot_Num, data = cproj1_nosol, na.action = na.omit))
+
+fitListflower <- list(
+  fvpd = lme(FirstFlower ~ AvgVPD + SpeciesRichness*Species, random = ~ 1 | Ring/Plot_Num, data = cproj1_nobropoasollup, na.action = na.omit),
+  ftemp = lme(FirstFlower ~ AvgTempC + SpeciesRichness*Species, random = ~ 1 | Ring/Plot_Num, data = cproj1_nobropoasollup, na.action = na.omit),
+  fhum = lme(FirstFlower ~ AvgRHperc + SpeciesRichness*Species, random = ~ 1 | Ring/Plot_Num, data = cproj1_nobropoasollup, na.action = na.omit))
+
+fitListfruit <-list(
+  frvpd = lme( FirstFruit ~ AvgVPD + SpeciesRichness*Species, random = ~ 1 | Ring/Plot_Num, data = cproj1_nobrosolsch, na.action = na.omit),
+  frtemp = lme( FirstFruit ~ AvgTempC + SpeciesRichness*Species, random = ~ 1 | Ring/Plot_Num, data = cproj1_nobrosolsch, na.action = na.omit),
+  frhum = lme( FirstFruit ~ AvgRHperc + SpeciesRichness*Species, random = ~ 1 | Ring/Plot_Num, data = cproj1_nobrosolsch, na.action = na.omit))
+
+fitListripe <- list(
+  rvpd = lme( FirstRipeFruit ~ AvgVPD + SpeciesRichness*Species, random = ~ 1 | Ring/Plot_Num, data = cproj1_nobrosollessch, na.action = na.omit),
+  rtemp = lme( FirstRipeFruit ~ AvgTempC + SpeciesRichness*Species, random = ~ 1 | Ring/Plot_Num, data = cproj1_nobrosollessch, na.action = na.omit),
+  rhum = lme( FirstRipeFruit ~ AvgRHperc + SpeciesRichness*Species, random = ~ 1 | Ring/Plot_Num, data = cproj1_nobrosollessch, na.action = na.omit)
+)
+
+library(AICcmodavg)
+
+aictab(fitListgrowth)
+aictab(fitListleaves)
+aictab(fitListflower)
+aictab(fitListfruit)
+aictab(fitListripe)
+
+
+#figures
+
