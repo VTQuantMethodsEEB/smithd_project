@@ -5,8 +5,6 @@ install.packages("ggplot2")
 library(ggplot2)
 install.packages("ggpubr")
 library(ggpubr)
-
-#
 install.packages("nlme")
 library(nlme)
 library(dplyr)
@@ -23,7 +21,7 @@ cproj1$FirstRipeFruit <- as.numeric(cproj1$FirstRipeFruit)
 cproj1$SpeciesRichness <- as.numeric(cproj1$SpeciesRichness)
 
 #Microclimate
-cproj1$AvgVPD <- as.numeric(cproj1$AvgTempC)
+cproj1$AvgTempC <- as.numeric(cproj1$AvgTempC)
 cproj1$AvgVPD <- as.numeric(cproj1$AvgVPD)
 cproj1$AvgRHperc <- as.numeric(cproj1$AvgRHperc)
 
