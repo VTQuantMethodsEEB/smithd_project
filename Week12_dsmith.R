@@ -9,6 +9,8 @@ library(effects)
 cproj1 = read.csv("pheno_classdata_Jan29.csv")
 head(cproj1)
 
+#KL - what hypothesis are you testing? 
+
 growthxvpd <- lmer(FirstInitialGrowth~AvgVPD + (1|Plot_Num),data=cproj1)
 summary(growthxvpd)
 # df = Numbers of obs (180) - (all the levels of fixed effects) - (all the levels of random effects)
@@ -40,6 +42,10 @@ gxvpd <- ggplot( cproj1, aes ( x = AvgVPD, y = FirstInitialGrowth, group = Speci
   )
 
 gxvpd
+
+#KL - you haven't plotted the data and model predictions from the mixed model. You can use the effects package to do this.
+#you have just used a stat smooth
+#need to use predict to get model predictions and then plot those with ggplot
 
 
 
